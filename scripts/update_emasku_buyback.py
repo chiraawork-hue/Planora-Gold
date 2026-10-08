@@ -18,21 +18,23 @@ with sync_playwright() as p:
     page = browser.new_page(locale="id-ID", timezone_id="Asia/Jakarta")
     page.goto(URL, wait_until="domcontentloaded", timeout=60000)
     page.locator("table").first.wait_for(timeout=30000)
-    page.wait_for_timeout(3000)
+    page.wait_for_timeout(5000)
+    print("Rendered table count:", page.locator("table").count())
     tables = page.locator("table")
     records = []
     for t in range(tables.count()):
         table = tables.nth(t)
         headings = " ".join(table.locator("th").all_text_contents()).lower()
+        print("Table", t, "headers:", headings[:240])
         if not ("buyback" in headings and ("berat" in headings or "gr" in headings)):
             continue
         for row in table.locator("tr").all():
-            cells = [re.sub(r"\\s+", " ", v).strip() for v in row.locator("td").all_text_contents()]
+            cells = [re.sub(r"\s+", " ", v).strip() for v in row.locator("td").all_text_contents()]
             if not cells: continue
             # Table can split 'Rp' and number into separate cells.
             values = [v for v in cells if v.lower() != "rp" and v]
             if len(values) < 3: continue
-            m = re.fullmatch(r"(\\d+(?:[.,]\\d+)?)\\s*gr", values[0], re.I)
+            m = re.fullmatch(r"(\d+(?:[.,]\d+)?)\s*gr", values[0], re.I)
             if not m: continue
             weight = float(m.group(1).replace(",", "."))
             if weight not in WEIGHTS: continue
