@@ -28,7 +28,17 @@ with sync_playwright() as p:
         print("Table", t, "headers:", headings[:240])
         if not ("buyback" in headings and ("berat" in headings or "gr" in headings)):
             continue
+        in_gold = False
         for row in table.locator("tr").all():
+            row_text = re.sub(r"\s+", " ", row.inner_text()).strip()
+            if re.fullmatch(r"GOLD", row_text, re.I):
+                in_gold = True
+                continue
+            if in_gold and re.fullmatch(r"(?:PRIME|SILVER|PLATINUM|GOLD PRIME|EMASKU PRIME)", row_text, re.I):
+                in_gold = False
+                continue
+            if not in_gold:
+                continue
             cells = [re.sub(r"\s+", " ", v).strip() for v in row.locator("td").all_text_contents()]
             if not cells: continue
             # Table can split 'Rp' and number into separate cells.
@@ -42,6 +52,7 @@ with sync_playwright() as p:
             if not (100000 <= buyback <= purchase <= 5000000000):
                 raise SystemExit("Invalid buyback / purchase prices; previous feed preserved")
             records.append((weight, purchase, buyback))
+    print("Selected GOLD rows:", len(records), "weights:", [r[0] for r in records])
     browser.close()
 
 if set(w for w, _, _ in records) != set(WEIGHTS) or len(records) != len(WEIGHTS):
