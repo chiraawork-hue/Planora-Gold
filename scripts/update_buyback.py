@@ -66,15 +66,15 @@ def fetch_emasku():
     parser = TextExtractor()
     parser.feed(html)
     content = " ".join(parser.parts)
-    stamp = re.search(r"Terakhir\\s+Update\\s+(\\d{2})/(\\d{2})/(\\d{2,4})", content, re.I)
-    match = re.search(r"Harga\\s+Buyback\\s+Rp\\s*([\\d.,]+)", content, re.I)
+    stamp = re.search(r"Terakhir\s+Update\s+(\d{2})/(\d{2})/(\d{2,4})", content, re.I)
+    match = re.search(r"Harga\s+Buyback\s+Rp\s*([\d.,]+)", content, re.I)
     if not stamp or not match:
         raise RuntimeError("HRTA official buyback price or update date missing")
     year = int(stamp.group(3))
     if year < 100:
         year += 2000
     date = datetime(year, int(stamp.group(2)), int(stamp.group(1))).date()
-    value = int(re.sub(r"\\D", "", match.group(1)))
+    value = int(re.sub(r"\D", "", match.group(1)))
     if abs((datetime.now().date()-date).days) > 7:
         raise RuntimeError(f"HRTA source is stale: {date}")
     if not 100_000 <= value <= 10_000_000:
