@@ -57,6 +57,32 @@ def fetch_galeri24():
                        "source": url, "verified": True} for weight, value in sorted(found.items()))
     return result
 
+def fetch_emasku():
+    """Use HRTA Gold's published buyback per gram only with a verifiable recent date."""
+    url = "https://hrtagold.id/id"
+    request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 PlanoraGold/1.0"})
+    with urllib.request.urlopen(request, timeout=30) as response:
+        html = response.read(4_000_000).decode("utf-8", errors="replace")
+    parser = TextExtractor()
+    parser.feed(html)
+    content = " ".join(parser.parts)
+    stamp = re.search(r"Terakhir\\s+Update\\s+(\\d{2})/(\\d{2})/(\\d{2,4})", content, re.I)
+    match = re.search(r"Harga\\s+Buyback\\s+Rp\\s*([\\d.,]+)", content, re.I)
+    if not stamp or not match:
+        raise RuntimeError("HRTA official buyback price or update date missing")
+    year = int(stamp.group(3))
+    if year < 100:
+        year += 2000
+    date = datetime(year, int(stamp.group(2)), int(stamp.group(1))).date()
+    value = int(re.sub(r"\\D", "", match.group(1)))
+    if abs((datetime.now().date()-date).days) > 7:
+        raise RuntimeError(f"HRTA source is stale: {date}")
+    if not 100_000 <= value <= 10_000_000:
+        raise RuntimeError("HRTA buyback price failed validation")
+    return [{"brand":"Emasku","grams":grams,"value":round(value*grams),
+             "date":date.isoformat(),"source":url,"verified":True}
+            for grams in (0.5,1,2,5,10,25,50,100)]
+
 def fetch_antam():
     """Read issuer buyback per gram; fail closed if official data cannot be verified."""
     import urllib.error
@@ -138,6 +164,14 @@ def main():
         print(f'Verified {len(additional)} Galeri24 buyback quotes')
     except Exception as exc:
         print(f'Galeri24 quotes unchanged (validation failed): {exc}')
+    try:
+        additional = fetch_emasku()
+        keys = {(p['brand'], p['grams'], p['date']) for p in additional}
+        prices = [p for p in prices if (p.get('brand'), p.get('grams'), p.get('date')) not in keys]
+        prices.extend(additional)
+        print(f'Verified {len(additional)} Emasku quotes from HRTA')
+    except Exception as exc:
+        print(f'Emasku quotes unchanged (validation failed): {exc}')
     # Retain a bounded history and never overwrite older verified observations.
     prices = sorted(prices, key=lambda p: p["date"])[-1500:]
     result = {"schema": 1, "updatedAt": datetime.now().isoformat(timespec="seconds") + "Z", "prices": prices,
