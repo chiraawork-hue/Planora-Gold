@@ -20,7 +20,7 @@ class TextExtractor(HTMLParser):
             self.parts.append(value)
 
 def fetch_galeri24():
-    """Read Galeri24 outlet buyback quotes for both Galeri24 and Antam products."""
+    """Read Galeri24 outlet buyback quotes for Galeri24, Antam and Lotus Archi."""
     url = "https://galeri24.co.id/harga-emas"
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 PlanoraGold/1.0"})
     with urllib.request.urlopen(request, timeout=30) as response:
@@ -31,7 +31,7 @@ def fetch_galeri24():
     months = {"januari": 1, "februari": 2, "maret": 3, "april": 4, "mei": 5, "juni": 6,
               "juli": 7, "agustus": 8, "september": 9, "oktober": 10, "november": 11, "desember": 12}
     result = []
-    for label, brand in (("GALERI 24", "Galeri 24"), ("ANTAM", "Antam")):
+    for label, brand in (("GALERI 24", "Galeri 24"), ("ANTAM", "Antam"), ("LOTUS ARCHI", "Lotus")):
         heading = re.search(r"Harga\s+" + label + r"\s+Berat\s+Harga\s+Jual\s+Harga\s+Buyback", content, re.I)
         if not heading:
             raise RuntimeError(f"Galeri24 section missing: {label}")
@@ -51,7 +51,7 @@ def fetch_galeri24():
             value = int(re.sub(r"\D", "", buyback))
             if 100_000 * grams <= value <= 10_000_000 * grams:
                 found[grams] = value
-        if len(found) < 7:
+        if len(found) < (5 if brand == "Lotus" else 7):
             raise RuntimeError(f"Galeri24 buyback rows incomplete: {label}: {len(found)}")
         result.extend({"brand": brand, "grams": weight, "value": value, "date": date.isoformat(),
                        "source": url, "verified": True} for weight, value in sorted(found.items()))
@@ -138,10 +138,6 @@ def main():
         print(f'Verified {len(additional)} Galeri24 buyback quotes')
     except Exception as exc:
         print(f'Galeri24 quotes unchanged (validation failed): {exc}')
-    try:
-        print("ANTAM buyback uses Galeri24 outlet quotes; issuer fetch not used")
-    except Exception as exc:
-        print(f'ANTAM LM quotes unchanged (validation failed): {exc}')
     # Retain a bounded history and never overwrite older verified observations.
     prices = sorted(prices, key=lambda p: p["date"])[-1500:]
     result = {"schema": 1, "updatedAt": datetime.now().isoformat(timespec="seconds") + "Z", "prices": prices,
