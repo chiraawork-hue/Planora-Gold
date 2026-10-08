@@ -290,4 +290,30 @@ let officialQuotes=[{"brand":"UBS","grams":0.5,"value":1160000,"date":"2026-10-0
 (function(){const key='planora-gold-theme',root=document.documentElement,button=document.getElementById('themeToggle');function apply(mode){root.dataset.theme=mode;button.textContent=mode==='dark'?'☀️ Mode terang':'🌙 Mode gelap';button.setAttribute('aria-pressed',String(mode==='dark'));document.querySelector('meta[name="theme-color"]').setAttribute('content',mode==='dark'?'#15151a':'#ffffff')}let mode='light';try{mode=localStorage.getItem(key)==='dark'?'dark':'light'}catch{}apply(mode);button.addEventListener('click',()=>{const next=root.dataset.theme==='dark'?'light':'dark';apply(next);try{localStorage.setItem(key,next)}catch{}})})();
 
 (function(){const key='planora-gold-onboarding-v1',overlay=document.getElementById('onboardOverlay'),steps=[{icon:'CH',title:'Selamat datang di Planora Gold',text:'Ruang pribadimu untuk mencatat dan memantau koleksi emas. Sedikit demi sedikit, jadi sesuatu yang berarti.'},{icon:'＋',title:'Catat emas pertamamu',text:'Tekan tombol +, pilih merek dan gramasi dari katalog, lalu isi tanggal, harga pembelian, dan jumlah keping. Koleksimu akan tersimpan di halaman Koleksi.'},{icon:'↗',title:'Pantau nilai portofoliomu',text:'Home menampilkan estimasi nilai jual kembali berdasarkan harga buyback yang tersedia. Hijau berarti untung, merah berarti rugi. Grafik tren membutuhkan data dari setidaknya dua tanggal berbeda.'},{icon:'▤',title:'Jaga catatan emasmu',text:'Data koleksi disimpan di browser perangkat ini, bukan otomatis tersinkron antarperangkat. Buka Pengaturan untuk mengunduh backup atau memulihkan data dari file.'}];let index=0;const title=document.getElementById('onboardTitle'),desc=document.getElementById('onboardText'),art=document.getElementById('onboardIllustration'),progress=document.getElementById('onboardProgress'),back=document.getElementById('onboardBack'),next=document.getElementById('onboardNext');function paint(){const step=steps[index];title.textContent=step.title;desc.textContent=step.text;art.textContent=step.icon;progress.innerHTML=steps.map((_,i)=>'<span class="'+(i<=index?'active':'')+'"></span>').join('');document.getElementById('onboardStep').textContent='LANGKAH '+(index+1)+' DARI '+steps.length;back.disabled=index===0;next.textContent=index===steps.length-1?'Mulai gunakan Planora ✓':'Lanjut →'}function close(){overlay.hidden=true;document.body.style.overflow='';try{localStorage.setItem(key,'seen')}catch{}}function open(){index=0;paint();overlay.hidden=false;document.body.style.overflow='hidden'}back.addEventListener('click',()=>{if(index>0){index--;paint()}});next.addEventListener('click',()=>{if(index<steps.length-1){index++;paint()}else close()});document.getElementById('onboardSkip').addEventListener('click',close);document.getElementById('reopenGuide').addEventListener('click',open);let seen=false;try{seen=localStorage.getItem(key)==='seen'}catch{}if(!seen)open()})();
+</script><script>
+/* Hartadinata public reference price: informational only, never injected into buyback quotes. */
+(async function(){
+  const box=document.createElement('section');
+  box.className='panel';
+  box.setAttribute('aria-label','Harga referensi EMASKU Hartadinata');
+  box.innerHTML='<div style="font-weight:800;font-size:15px;margin-bottom:8px">Harga referensi EMASKU · Hartadinata</div><div id="hrtaPrice" style="font-size:23px;font-weight:800">Memuat harga…</div><div id="hrtaStatus" style="font-size:11px;color:#777;line-height:1.6;margin-top:8px">Harga resmi per gram, bukan harga buyback.</div><a href="https://hartadinataabadi.co.id/" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:#681f32">Lihat sumber resmi ↗</a>';
+  const home=document.querySelector('[data-page="home"]')||document.querySelector('#home')||document.querySelector('.content');
+  if(!home)return;
+  home.insertBefore(box,home.firstChild);
+  const price=box.querySelector('#hrtaPrice'),status=box.querySelector('#hrtaStatus');
+  try{
+    const res=await fetch('./data/hartadinata-price.json',{cache:'no-store'});
+    if(!res.ok)throw Error('Belum tersedia');
+    const data=await res.json();
+    if(data.brand!=='Emasku'||data.type!=='reference_price_per_gram'||!Number.isFinite(data.price_idr_per_gram)||data.price_idr_per_gram<=0||!data.source_updated_at)throw Error('Data tidak valid');
+    price.textContent='Rp'+data.price_idr_per_gram.toLocaleString('id-ID')+' / gram';
+    const date=new Date(data.source_updated_at);
+    const age=Date.now()-date.getTime();
+    const stale=!Number.isFinite(age)||age<0||age>48*3600000;
+    status.textContent=(stale?'⚠ Harga lama — ':'')+'Pembaruan sumber: '+(Number.isNaN(date.getTime())?'tidak diketahui':date.toLocaleString('id-ID',{timeZone:'Asia/Jakarta',dateStyle:'medium',timeStyle:'short'}))+' WIB. Harga referensi, bukan buyback; tidak dipakai menghitung keuntungan.';
+  }catch(err){
+    price.textContent='Harga belum tersedia';
+    status.textContent='Sinkronisasi belum berhasil. Periksa harga langsung di situs resmi Hartadinata. Data buyback manual tetap aman.';
+  }
+})();
 </script></body></html>
