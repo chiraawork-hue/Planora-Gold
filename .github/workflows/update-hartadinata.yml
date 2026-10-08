@@ -1,0 +1,23 @@
+name: Update Hartadinata reference price
+on:
+  schedule:
+    - cron: '17 1,5,9 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch and validate official price
+        run: python scripts/update_hartadinata.py
+      - name: Commit only changed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/hartadinata-price.json
+          git diff --cached --quiet || (git commit -m "Update EMASKU public reference price" && git push)
