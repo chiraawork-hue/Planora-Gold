@@ -21,7 +21,8 @@ if date>datetime.now(ZoneInfo("Asia/Jakarta")).date(): raise SystemExit("Future 
 # Accept only the explicitly labeled Gold section, not Prime or product sale prices.
 section=re.search(r"\bGold\b(.*?)\bPrime\b",plain,re.I)
 if not section: raise SystemExit("No verifiable Gold buyback table; feed unchanged")
-WEIGHTS={0.1,0.25,0.5,1,2,5,10,25,50,100,125,150,175,200,250,500,1000}\nentries=[]
+WEIGHTS={0.1,0.25,0.5,1,2,5,10,25,50,100,125,150,175,200,250,500,1000}
+entries=[]
 for grams,buy,bback in re.findall(r"(0\.1|0\.25|0\.5|1|2|5|10|25|50|100|125|150|175|200|250|500|1000)\s*gr\s*Rp\s*([\d.,]+)\s*Rp\s*([\d.,]+)",section.group(1),re.I):
     value=int(re.sub(r"\D","",bback))
     if not 100000<=value<=5000000000: raise SystemExit("Suspicious price")
