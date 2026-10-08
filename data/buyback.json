@@ -1,6 +1,87 @@
 {
   "schema": 1,
-  "updatedAt": null,
-  "prices": [],
-  "note": "Only publish individually verified official buyback quotes with brand, grams, value, date, source and verified:true. Never use illustrative values."
+  "updatedAt": "2026-10-08T04:18:33Z",
+  "prices": [
+    {
+      "brand": "UBS",
+      "grams": 0.5,
+      "value": 1160000,
+      "date": "2026-10-08",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 1.0,
+      "value": 2320000,
+      "date": "2026-10-08",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 2.0,
+      "value": 4641000,
+      "date": "2026-10-08",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 3.0,
+      "value": 6961000,
+      "date": "2026-10-08",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 4.0,
+      "value": 9282000,
+      "date": "2026-10-08",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 5.0,
+      "value": 11602000,
+      "date": "2026-10-08",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 10.0,
+      "value": 23205000,
+      "date": "2026-10-08",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 25.0,
+      "value": 58013000,
+      "date": "2026-10-08",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 50.0,
+      "value": 116027000,
+      "date": "2026-10-08",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 100.0,
+      "value": 232054000,
+      "date": "2026-10-08",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    }
+  ],
+  "note": "Official buyback prices, not guaranteed sale proceeds. Check fees and source date."
 }
