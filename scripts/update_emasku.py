@@ -29,7 +29,9 @@ def main():
     with urllib.request.urlopen(req,timeout=25) as resp: html=resp.read().decode("utf-8","replace")
     p=TextTable(); p.feed(html)
     full=" ".join(p.text)
-    match=re.search(r"(?:Terakhir\s+update|Tanggal)\s*(?:Tanggal\s*)?(\d{1,2})\s+([A-Za-z]+)\s+(20\d{2})",full,re.I)
+    # The website renders 'Tanggal', the date and the time in separate HTML nodes.
+    # Match the published calendar date independently of its surrounding labels.
+    match=re.search(r"\\b(\\d{1,2})\\s+(Januari|Februari|Maret|April|Mei|Juni|Juli|Agustus|September|Oktober|November|Desember)\\s+(20\\d{2})\\b",full,re.I)
     months={"januari":1,"februari":2,"maret":3,"april":4,"mei":5,"juni":6,"juli":7,"agustus":8,"september":9,"oktober":10,"november":11,"desember":12}
     if not match or match.group(2).lower() not in months:
         raise RuntimeError("Source publication date not found: refuse to mislabel old prices as today's.")
