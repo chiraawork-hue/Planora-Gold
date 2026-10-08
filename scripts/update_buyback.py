@@ -60,26 +60,41 @@ def fetch_galeri24():
     return result
 
 def fetch_antam():
-    """Read ANTAM LM's own official buyback price per gram, not its retail price."""
-    url = "https://www.logammulia.com/id/sell/gold"
-    request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 PlanoraGold/1.0"})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        html = response.read(4_000_000).decode("utf-8", errors="replace")
-    parser = TextExtractor()
-    parser.feed(html)
-    content = " ".join(parser.parts)
-    match = re.search(r"Harga Buyback\s*:?\s*Rp\s*([\d.,]+)", content, re.I)
-    stamp = re.search(r"Perubahan Terakhir\s*:?\s*(\d{1,2})\s+([A-Za-z]+)\s+(20\d{2})", content, re.I)
-    months = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,"jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12}
-    if not match or not stamp or stamp.group(2)[:3].lower() not in months:
-        raise RuntimeError("ANTAM official buyback value/date missing")
-    value = int(re.sub(r"\D", "", match.group(1)))
-    date = datetime(int(stamp.group(3)), months[stamp.group(2)[:3].lower()], int(stamp.group(1))).date()
-    if not 100_000 <= value <= 10_000_000 or abs((datetime.now().date()-date).days)>7:
-        raise RuntimeError("ANTAM official buyback value/date outside validation limits")
-    return [{"brand":"Antam","grams":grams,"value":round(value*grams),
-             "date":date.isoformat(),"source":url,"verified":True}
-            for grams in (0.5,1,2,3,5,10,25,50,100)]
+    """Read issuer buyback per gram; fail closed if official data cannot be verified."""
+    import urllib.error
+    urls = ("https://www.logammulia.com/id/sell/gold",
+            "https://logammulia.com/id/sell/gold")
+    failures = []
+    for url in urls:
+        try:
+            request = urllib.request.Request(url, headers={
+                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8",
+            })
+            with urllib.request.urlopen(request, timeout=30) as response:
+                html = response.read(4_000_000).decode("utf-8", errors="replace")
+            parser = TextExtractor()
+            parser.feed(html)
+            content = " ".join(parser.parts)
+            # Input controls can interrupt the text between the label and price.
+            match = re.search(r"Harga\s+Buyback\s*:\s*(?:\[?Input\]?\s*)?Rp\s*([\d.,]+)", content, re.I)
+            stamp = re.search(r"Perubahan\s+Terakhir\s*:\s*(\d{1,2})\s+([A-Za-z]+)\s+(20\d{2})", content, re.I)
+            months = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,
+                      "jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12}
+            if not match or not stamp or stamp.group(2)[:3].lower() not in months:
+                raise RuntimeError(f"buyback or timestamp absent (page text length {len(content)}; price={bool(match)}; date={bool(stamp)})")
+            value = int(re.sub(r"\D", "", match.group(1)))
+            date = datetime(int(stamp.group(3)), months[stamp.group(2)[:3].lower()], int(stamp.group(1))).date()
+            if not 100_000 <= value <= 10_000_000 or abs((datetime.now().date()-date).days) > 7:
+                raise RuntimeError(f"buyback value/date failed validation: {value}, {date}")
+            print(f"ANTAM LM official source: {url}; buyback Rp {value:,}/g; dated {date}")
+            return [{"brand":"Antam","grams":grams,"value":round(value*grams),
+                     "date":date.isoformat(),"source":url,"verified":True}
+                    for grams in (0.5,1,2,3,5,10,25,50,100)]
+        except Exception as exc:
+            failures.append(f"{url}: {type(exc).__name__}: {exc}")
+    raise RuntimeError("; ".join(failures))
 
 def main():
     request = urllib.request.Request(URL, headers={"User-Agent": "PlanoraGoldPriceVerifier/1.0"})
