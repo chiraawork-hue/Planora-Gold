@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-08T16:41:00+07:00",
+  "updatedAt": "2026-10-08T16:58:59.984364+07:00",
   "prices": [
     {
       "brand": "UBS",
@@ -298,7 +298,8 @@
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
@@ -308,7 +309,8 @@
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
@@ -318,147 +320,162 @@
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 1,
+      "grams": 1.0,
       "value": 2310000,
       "purchaseReference": 2439000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 2,
+      "grams": 2.0,
       "value": 4620000,
       "purchaseReference": 4838000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 5,
+      "grams": 5.0,
       "value": 11550000,
       "purchaseReference": 12005000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 10,
+      "grams": 10.0,
       "value": 23100000,
       "purchaseReference": 23940000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 25,
+      "grams": 25.0,
       "value": 57750000,
       "purchaseReference": 59575000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 50,
+      "grams": 50.0,
       "value": 115500000,
       "purchaseReference": 119100000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 100,
+      "grams": 100.0,
       "value": 231000000,
       "purchaseReference": 238100000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 125,
+      "grams": 125.0,
       "value": 288750000,
       "purchaseReference": 297000000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 150,
+      "grams": 150.0,
       "value": 346500000,
       "purchaseReference": 356250000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 175,
+      "grams": 175.0,
       "value": 404250000,
       "purchaseReference": 415450000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 200,
+      "grams": 200.0,
       "value": 462000000,
       "purchaseReference": 474600000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 250,
+      "grams": 250.0,
       "value": 574000000,
       "purchaseReference": 592000000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 500,
+      "grams": 500.0,
       "value": 1148000000,
       "purchaseReference": 1183500000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     },
     {
       "brand": "Emasku",
-      "grams": 1000,
+      "grams": 1000.0,
       "value": 2296000000,
       "purchaseReference": 2367000000,
       "date": "2026-10-08",
       "source": "https://hrtagold.id/id/gold-price",
       "verified": true,
-      "verificationNote": "User-provided screenshot of HRTA Gold GOLD table, captured 2026-10-08; not live"
+      "observedAt": "2026-10-08T16:58:59.984364+07:00",
+      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
     }
   ],
   "note": "Official buyback prices, not guaranteed sale proceeds. Check fees and source date."
