@@ -298,4 +298,41 @@ let officialQuotes=[{"brand":"UBS","grams":0.5,"value":1160000,"date":"2026-10-0
 (function(){const key='planora-gold-theme',root=document.documentElement,button=document.getElementById('themeToggle');function apply(mode){root.dataset.theme=mode;button.textContent=mode==='dark'?'☀️ Mode terang':'🌙 Mode gelap';button.setAttribute('aria-pressed',String(mode==='dark'));document.querySelector('meta[name="theme-color"]').setAttribute('content',mode==='dark'?'#15151a':'#ffffff')}let mode='light';try{mode=localStorage.getItem(key)==='dark'?'dark':'light'}catch{}apply(mode);button.addEventListener('click',()=>{const next=root.dataset.theme==='dark'?'light':'dark';apply(next);try{localStorage.setItem(key,next)}catch{}})})();
 
 (function(){const key='planora-gold-onboarding-v1',overlay=document.getElementById('onboardOverlay'),steps=[{icon:'CH',title:'Selamat datang di Planora Gold',text:'Ruang pribadimu untuk mencatat dan memantau koleksi emas. Sedikit demi sedikit, jadi sesuatu yang berarti.'},{icon:'＋',title:'Catat emas pertamamu',text:'Tekan tombol +, pilih merek dan gramasi dari katalog, lalu isi tanggal, harga pembelian, dan jumlah keping. Koleksimu akan tersimpan di halaman Koleksi.'},{icon:'↗',title:'Pantau nilai portofoliomu',text:'Home menampilkan estimasi nilai jual kembali berdasarkan harga buyback yang tersedia. Hijau berarti untung, merah berarti rugi. Grafik tren membutuhkan data dari setidaknya dua tanggal berbeda.'},{icon:'▤',title:'Jaga catatan emasmu',text:'Data koleksi disimpan di browser perangkat ini, bukan otomatis tersinkron antarperangkat. Buka Pengaturan untuk mengunduh backup atau memulihkan data dari file.'}];let index=0;const title=document.getElementById('onboardTitle'),desc=document.getElementById('onboardText'),art=document.getElementById('onboardIllustration'),progress=document.getElementById('onboardProgress'),back=document.getElementById('onboardBack'),next=document.getElementById('onboardNext');function paint(){const step=steps[index];title.textContent=step.title;desc.textContent=step.text;art.textContent=step.icon;progress.innerHTML=steps.map((_,i)=>'<span class="'+(i<=index?'active':'')+'"></span>').join('');document.getElementById('onboardStep').textContent='LANGKAH '+(index+1)+' DARI '+steps.length;back.disabled=index===0;next.textContent=index===steps.length-1?'Mulai gunakan Planora ✓':'Lanjut →'}let transitionTimer=null;function changeStep(nextIndex){if(nextIndex<0||nextIndex>=steps.length||nextIndex===index)return;const content=[art,document.getElementById('onboardStep'),title,desc,progress];const direction=nextIndex>index?1:-1;if(transitionTimer!==null)clearTimeout(transitionTimer);content.forEach(el=>{el.style.transition='none';el.style.transform='translateX(0)';el.style.opacity='1';void el.offsetWidth;el.style.transition='transform 180ms ease-in, opacity 180ms ease-in';el.style.transform='translateX('+(-direction*34)+'px)';el.style.opacity='0'});transitionTimer=setTimeout(()=>{index=nextIndex;paint();content.forEach(el=>{el.style.transition='none';el.style.transform='translateX('+(direction*34)+'px)';el.style.opacity='0';void el.offsetWidth;el.style.transition='transform 220ms ease-out, opacity 220ms ease-out';el.style.transform='translateX(0)';el.style.opacity='1'});transitionTimer=null},180)}function close(){if(transitionTimer!==null){clearTimeout(transitionTimer);transitionTimer=null}overlay.querySelectorAll('[style*=translateX]').forEach(el=>{el.style.transition='none';el.style.transform='';el.style.opacity=''});overlay.hidden=true;document.body.style.overflow='';try{localStorage.setItem(key,'seen')}catch{}}function open(){if(transitionTimer!==null){clearTimeout(transitionTimer);transitionTimer=null}overlay.querySelectorAll('[style*=translateX]').forEach(el=>{el.style.transition='none';el.style.transform='';el.style.opacity=''});index=0;paint();overlay.hidden=false;document.body.style.overflow='hidden'}back.addEventListener('click',()=>{if(index>0){changeStep(index-1)}});next.addEventListener('click',()=>{if(index<steps.length-1){changeStep(index+1)}else close()});document.getElementById('onboardSkip').addEventListener('click',close);document.getElementById('reopenGuide').addEventListener('click',open);let seen=false;try{seen=localStorage.getItem(key)==='seen'}catch{}if(!seen)open()})();
-</script><div id="goldActivationPreview" class="goldActivationPreview" hidden><div class="goldActivationCard"><img class="goldActivationLogo" src="./planora-gold-icon.svg" alt="Logo CH Planora Gold"><h1>Planora Gold</h1><p>Your private gold collection.<br>Selamat datang di ruang kecil untuk cerita emasmu.</p><label for="goldPreviewCode">Kode aktivasi</label><input id="goldPreviewCode" autocomplete="off" placeholder="Masukkan kode pembelian" aria-label="Kode aktivasi"><button type="button" id="goldPreviewActivate">Aktifkan Planora Gold</button><small id="goldPreviewMessage">Ini pratinjau desain. Aktivasi akan tersedia setelah sistem lisensi Gold terhubung.</small></div></div><script>(function(){const panel=document.getElementById('goldActivationPreview');if(new URLSearchParams(location.search).get('preview-activation')!=='1')return;panel.hidden=false;document.getElementById('goldPreviewActivate').onclick=()=>{document.getElementById('goldPreviewMessage').textContent='Kode belum dapat divalidasi karena sistem lisensi Gold masih disiapkan.'};})();</script></body></html>
+</script><div id="goldActivationPreview" class="goldActivationPreview"><div class="goldActivationCard"><img class="goldActivationLogo" src="./planora-gold-icon.svg" alt="Logo CH Planora Gold"><h1>Planora Gold</h1><p>Your private gold collection.<br>Selamat datang di ruang kecil untuk cerita emasmu.</p><label for="goldPreviewCode">Kode aktivasi</label><input id="goldPreviewCode" autocomplete="off" placeholder="Masukkan kode pembelian" aria-label="Kode aktivasi"><button type="button" id="goldPreviewActivate">Aktifkan Planora Gold</button><small id="goldPreviewMessage">Masukkan kode aktivasi Planora Gold yang kamu terima setelah pembelian.</small></div></div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script>
+(async function(){
+ const panel=document.getElementById('goldActivationPreview'),input=document.getElementById('goldPreviewCode'),btn=document.getElementById('goldPreviewActivate'),message=document.getElementById('goldPreviewMessage');
+ const url='https://btenltcmvkrgezxzqnlq.supabase.co',key='sb_publishable_E0STl2UFtRhjcw7ME2jGiQ_uKpJt-WV';
+ const TOKEN_KEY='planora_gold_device_token_v1',ACCESS_KEY='planora_gold_access_code_v1';
+ let token=localStorage.getItem(TOKEN_KEY);
+ if(!token){token=crypto.randomUUID();localStorage.setItem(TOKEN_KEY,token)}
+ const client=window.supabase.createClient(url,key);
+ const setMessage=(t)=>{message.textContent=t};
+ async function activate(code,silent=false){
+  code=(code||'').trim().toUpperCase();
+  if(!code){if(!silent)setMessage('Masukkan kode aktivasi Gold terlebih dahulu.');return false}
+  btn.disabled=true;btn.textContent='Memeriksa kode…';
+  try{
+   const {data,error}=await client.rpc('activate_planora_gold',{p_access_code:code,p_device_token:token,p_device_name:navigator.platform||'Perangkat'});
+   if(error)throw error;
+   if(data&&data.success){
+    localStorage.setItem(ACCESS_KEY,code);
+    panel.hidden=true;
+    document.body.style.overflow='';
+    return true;
+   }
+   localStorage.removeItem(ACCESS_KEY);
+   panel.hidden=false;
+   if(!silent)setMessage((data&&data.message)||'Kode aktivasi tidak valid.');
+   return false;
+  }catch(e){
+   panel.hidden=false;
+   if(!silent)setMessage('Belum dapat terhubung ke server aktivasi. Coba lagi.');
+   return false;
+  }finally{btn.disabled=false;btn.textContent='Aktifkan Planora Gold'}
+ }
+ btn.addEventListener('click',()=>activate(input.value));
+ input.addEventListener('keydown',e=>{if(e.key==='Enter')activate(input.value)});
+ const saved=localStorage.getItem(ACCESS_KEY);
+ if(saved){input.value=saved;setMessage('Memverifikasi aktivasi sebelumnya…');await activate(saved,true);if(!panel.hidden)setMessage('Silakan masukkan kode aktivasi Gold yang valid.')}
+})();
+</script></body></html>
