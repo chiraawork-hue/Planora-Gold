@@ -6,7 +6,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 from html import unescape
 
-URL="https://www.emasku.co.id/id/gold-price"
+URL="https://hrtagold.id/id/gold-price"
 req=urllib.request.Request(URL,headers={"User-Agent":"Mozilla/5.0 (compatible; PlanoraGold/1.0)"})
 with urllib.request.urlopen(req,timeout=30) as response:
     html=response.read().decode("utf-8","replace")
@@ -14,14 +14,14 @@ plain=unescape(re.sub(r"<[^>]*>"," ",html))
 plain=re.sub(r"\s+"," ",plain)
 date_match=re.search(r"(?:Terakhir update|Last update).*?(\d{1,2}\s+(?:Januari|Februari|Maret|April|Mei|Juni|Juli|Agustus|September|Oktober|November|Desember)\s+\d{4})",plain,re.I)
 months={name:i for i,name in enumerate("Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember".split(),1)}
-if not date_match: raise SystemExit("No source timestamp in server HTML; feed unchanged")
+if not date_match: raise SystemExit("Official page has no verifiable dated buyback table in HTML; no prices changed")
 day,month,year=date_match.group(1).split()
 date=datetime(int(year),months[month.capitalize()],int(day),tzinfo=ZoneInfo("Asia/Jakarta")).date()
 if date>datetime.now(ZoneInfo("Asia/Jakarta")).date(): raise SystemExit("Future source date")
 # Accept only the explicitly labeled Gold section, not Prime or product sale prices.
 section=re.search(r"\bGold\b(.*?)\bPrime\b",plain,re.I)
 if not section: raise SystemExit("No verifiable Gold buyback table; feed unchanged")
-entries=[]
+WEIGHTS={0.1,0.25,0.5,1,2,5,10,25,50,100,125,150,175,200,250,500,1000}\nentries=[]
 for grams,buy,bback in re.findall(r"(0\.1|0\.25|0\.5|1|2|5|10|25|50|100|125|150|175|200|250|500|1000)\s*gr\s*Rp\s*([\d.,]+)\s*Rp\s*([\d.,]+)",section.group(1),re.I):
     value=int(re.sub(r"\D","",bback))
     if not 100000<=value<=5000000000: raise SystemExit("Suspicious price")
