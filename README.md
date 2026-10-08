@@ -1,4 +1,4 @@
-# Planora Gold ✦
+# Planora Gold 
 
 **Your Private Gold Collection** — personal physical-gold portfolio tracker.
 
