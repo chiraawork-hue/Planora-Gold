@@ -20,9 +20,7 @@ class TextExtractor(HTMLParser):
             self.parts.append(value)
 
 def fetch_galeri24():
-    """Galeri 24's own published buyback prices for Galeri 24 and Antam products.
-    Antam quotes here are Galeri 24 outlet quotes, NOT Antam LM issuer buyback.
-    """
+    """Read Galeri24 outlet buyback quotes for both Galeri24 and Antam products."""
     url = "https://galeri24.co.id/harga-emas"
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 PlanoraGold/1.0"})
     with urllib.request.urlopen(request, timeout=30) as response:
@@ -33,7 +31,7 @@ def fetch_galeri24():
     months = {"januari": 1, "februari": 2, "maret": 3, "april": 4, "mei": 5, "juni": 6,
               "juli": 7, "agustus": 8, "september": 9, "oktober": 10, "november": 11, "desember": 12}
     result = []
-    for label, brand in (("GALERI 24", "Galeri 24"),):
+    for label, brand in (("GALERI 24", "Galeri 24"), ("ANTAM", "Antam")):
         heading = re.search(r"Harga\s+" + label + r"\s+Berat\s+Harga\s+Jual\s+Harga\s+Buyback", content, re.I)
         if not heading:
             raise RuntimeError(f"Galeri24 section missing: {label}")
@@ -141,11 +139,7 @@ def main():
     except Exception as exc:
         print(f'Galeri24 quotes unchanged (validation failed): {exc}')
     try:
-        additional = fetch_antam()
-        keys = {(p['brand'], p['grams'], p['date']) for p in additional}
-        prices = [p for p in prices if (p.get('brand'), p.get('grams'), p.get('date')) not in keys]
-        prices.extend(additional)
-        print(f'Verified ANTAM LM issuer buyback quote for {additional[0]["date"]}')
+        print("ANTAM buyback uses Galeri24 outlet quotes; issuer fetch not used")
     except Exception as exc:
         print(f'ANTAM LM quotes unchanged (validation failed): {exc}')
     # Retain a bounded history and never overwrite older verified observations.
