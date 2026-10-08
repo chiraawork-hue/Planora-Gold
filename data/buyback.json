@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-08T06:23:41Z",
+  "updatedAt": "2026-10-08T06:39:55Z",
   "prices": [
     {
       "brand": "UBS",
@@ -236,6 +236,54 @@
     },
     {
       "brand": "Antam",
+      "grams": 100.0,
+      "value": 232159000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
+      "grams": 1.0,
+      "value": 2333000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
+      "grams": 5.0,
+      "value": 11665000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
+      "grams": 10.0,
+      "value": 23330000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
+      "grams": 25.0,
+      "value": 58039000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
+      "grams": 50.0,
+      "value": 116079000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
       "grams": 100.0,
       "value": 232159000,
       "date": "2026-10-08",
