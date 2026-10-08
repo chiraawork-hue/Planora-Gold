@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-08T04:18:33Z",
+  "updatedAt": "2026-10-08T05:27:47Z",
   "prices": [
     {
       "brand": "UBS",
       "grams": 0.5,
-      "value": 1160000,
+      "value": 1158000,
       "date": "2026-10-08",
       "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
       "verified": true
@@ -13,7 +13,7 @@
     {
       "brand": "UBS",
       "grams": 1.0,
-      "value": 2320000,
+      "value": 2317000,
       "date": "2026-10-08",
       "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
       "verified": true
@@ -21,7 +21,7 @@
     {
       "brand": "UBS",
       "grams": 2.0,
-      "value": 4641000,
+      "value": 4635000,
       "date": "2026-10-08",
       "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
       "verified": true
@@ -29,7 +29,7 @@
     {
       "brand": "UBS",
       "grams": 3.0,
-      "value": 6961000,
+      "value": 6952000,
       "date": "2026-10-08",
       "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
       "verified": true
@@ -37,7 +37,7 @@
     {
       "brand": "UBS",
       "grams": 4.0,
-      "value": 9282000,
+      "value": 9270000,
       "date": "2026-10-08",
       "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
       "verified": true
@@ -45,7 +45,7 @@
     {
       "brand": "UBS",
       "grams": 5.0,
-      "value": 11602000,
+      "value": 11587000,
       "date": "2026-10-08",
       "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
       "verified": true
@@ -53,7 +53,7 @@
     {
       "brand": "UBS",
       "grams": 10.0,
-      "value": 23205000,
+      "value": 23175000,
       "date": "2026-10-08",
       "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
       "verified": true
@@ -61,7 +61,7 @@
     {
       "brand": "UBS",
       "grams": 25.0,
-      "value": 58013000,
+      "value": 57938000,
       "date": "2026-10-08",
       "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
       "verified": true
@@ -69,7 +69,7 @@
     {
       "brand": "UBS",
       "grams": 50.0,
-      "value": 116027000,
+      "value": 115876000,
       "date": "2026-10-08",
       "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
       "verified": true
@@ -77,9 +77,97 @@
     {
       "brand": "UBS",
       "grams": 100.0,
-      "value": 232054000,
+      "value": 231753000,
       "date": "2026-10-08",
       "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 0.5,
+      "value": 1177000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 1.0,
+      "value": 2358000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 2.0,
+      "value": 4708000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 5.0,
+      "value": 11770000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 10.0,
+      "value": 23540000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 25.0,
+      "value": 58562000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 50.0,
+      "value": 117124000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 100.0,
+      "value": 234248000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 250.0,
+      "value": 582722000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 500.0,
+      "value": 1165445000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 1000.0,
+      "value": 2330891000,
+      "date": "2026-10-08",
+      "source": "https://galeri24.co.id/harga-emas",
       "verified": true
     }
   ],
