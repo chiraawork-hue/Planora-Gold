@@ -171,14 +171,13 @@ def main():
                  "source":URL,"verified":True} for grams,value in sorted(found.items())]
 
     merge("UBS", fetch_ubs)
-    merge("Antam", fetch_antam)
 
     def fetch_galeri_group():
         return fetch_galeri24()
     # These three brands share one official Galeri24 source and validation.
     try:
         additional = fetch_galeri_group()
-        for brand in ("Galeri 24", "Lotus"):
+        for brand in ("Galeri 24", "Lotus", "Antam"):
             subset = [p for p in additional if p["brand"] == brand]
             if not subset:
                 results[brand] = "STALE: No verified quotes"
