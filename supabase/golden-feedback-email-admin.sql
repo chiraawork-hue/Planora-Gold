@@ -5,7 +5,7 @@ drop policy if exists "Golden feedback admin read" on public.planora_gold_feedba
 create policy "Golden feedback admin read"
 on public.planora_gold_feedback for select to authenticated
 using (
-  lower(auth.jwt()->>'email') = 'planoracore@gmail.com'
+  lower(auth.jwt()->>'email') = 'planora@gmail.com'
   and (auth.jwt()->>'email_verified')::boolean is true
 );
 -- Private screenshots: admin can generate short-lived signed URLs.
@@ -14,6 +14,6 @@ create policy "Golden feedback admin screenshot read"
 on storage.objects for select to authenticated
 using (
   bucket_id = 'planora-gold-feedback'
-  and lower(auth.jwt()->>'email') = 'planoracore@gmail.com'
+  and lower(auth.jwt()->>'email') = 'planora@gmail.com'
   and (auth.jwt()->>'email_verified')::boolean is true
 );
