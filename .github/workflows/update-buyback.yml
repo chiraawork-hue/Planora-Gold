@@ -1,7 +1,7 @@
 name: Update verified gold buyback prices
 on:
   schedule:
-    - cron: '25 9 * * *'
+    - cron: '0 3 * * *' # 10:00 WIB (UTC+7)
   workflow_dispatch:
 permissions:
   contents: write
