@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chiraawork-hue.github.io/Planora-Gold/sitemap.xml
