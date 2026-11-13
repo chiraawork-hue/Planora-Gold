@@ -1,10 +1,10 @@
 {
   "brand": "Emasku",
   "type": "reference_price_per_gram",
-  "price_idr_per_gram": 2426000,
+  "price_idr_per_gram": 2388000,
   "currency": "IDR",
-  "source_updated_at": "2026-11-12T14:34:00+07:00",
-  "fetched_at": "2026-11-12T17:36:32.428118+00:00",
+  "source_updated_at": "2026-11-13T12:04:00+07:00",
+  "fetched_at": "2026-11-13T07:59:34.576457+00:00",
   "source_url": "https://hartadinataabadi.co.id/",
   "disclaimer": "Harga referensi EMASKU per gram dari situs resmi; bukan harga buyback atau harga transaksi per keping."
 }
