@@ -1,482 +1,7 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-20T17:41:59.394992+07:00",
+  "updatedAt": "2026-11-20T10:59:30.801743+00:00",
   "prices": [
-    {
-      "brand": "UBS",
-      "grams": 10.0,
-      "value": 23235000,
-      "date": "2026-10-22",
-      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
-      "verified": true
-    },
-    {
-      "brand": "UBS",
-      "grams": 25.0,
-      "value": 58089000,
-      "date": "2026-10-22",
-      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
-      "verified": true
-    },
-    {
-      "brand": "UBS",
-      "grams": 50.0,
-      "value": 116178000,
-      "date": "2026-10-22",
-      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
-      "verified": true
-    },
-    {
-      "brand": "UBS",
-      "grams": 100.0,
-      "value": 232356000,
-      "date": "2026-10-22",
-      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
-      "verified": true
-    },
-    {
-      "brand": "Galeri 24",
-      "grams": 0.5,
-      "value": 1176000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Galeri 24",
-      "grams": 1.0,
-      "value": 2358000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Galeri 24",
-      "grams": 2.0,
-      "value": 4707000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Galeri 24",
-      "grams": 5.0,
-      "value": 11768000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Galeri 24",
-      "grams": 10.0,
-      "value": 23537000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Galeri 24",
-      "grams": 25.0,
-      "value": 58553000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Galeri 24",
-      "grams": 50.0,
-      "value": 117106000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Galeri 24",
-      "grams": 100.0,
-      "value": 234213000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Galeri 24",
-      "grams": 250.0,
-      "value": 582634000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Galeri 24",
-      "grams": 500.0,
-      "value": 1165269000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Galeri 24",
-      "grams": 1000.0,
-      "value": 2330539000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Lotus",
-      "grams": 1.0,
-      "value": 2332000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Lotus",
-      "grams": 5.0,
-      "value": 11663000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Lotus",
-      "grams": 10.0,
-      "value": 23327000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Lotus",
-      "grams": 25.0,
-      "value": 58031000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Lotus",
-      "grams": 50.0,
-      "value": 116062000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Lotus",
-      "grams": 100.0,
-      "value": 232124000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Antam",
-      "grams": 0.5,
-      "value": 1166000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Antam",
-      "grams": 1.0,
-      "value": 2332000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Antam",
-      "grams": 2.0,
-      "value": 4665000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Antam",
-      "grams": 3.0,
-      "value": 6998000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Antam",
-      "grams": 5.0,
-      "value": 11663000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Antam",
-      "grams": 10.0,
-      "value": 23327000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Antam",
-      "grams": 25.0,
-      "value": 58031000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Antam",
-      "grams": 50.0,
-      "value": 116062000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Antam",
-      "grams": 100.0,
-      "value": 232124000,
-      "date": "2026-10-22",
-      "source": "https://galeri24.co.id/harga-emas",
-      "verified": true
-    },
-    {
-      "brand": "Emasku",
-      "grams": 0.1,
-      "value": 231600,
-      "purchaseReference": 310500,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 0.25,
-      "value": 579000,
-      "purchaseReference": 729000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 0.5,
-      "value": 1158000,
-      "purchaseReference": 1278000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 1.0,
-      "value": 2316000,
-      "purchaseReference": 2446000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 2.0,
-      "value": 4632000,
-      "purchaseReference": 4852000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 5.0,
-      "value": 11580000,
-      "purchaseReference": 12040000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 10.0,
-      "value": 23160000,
-      "purchaseReference": 24010000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 25.0,
-      "value": 57900000,
-      "purchaseReference": 59750000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 50.0,
-      "value": 115800000,
-      "purchaseReference": 119450000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 100.0,
-      "value": 231600000,
-      "purchaseReference": 238800000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 125.0,
-      "value": 289500000,
-      "purchaseReference": 297875000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 150.0,
-      "value": 347400000,
-      "purchaseReference": 357300000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 175.0,
-      "value": 405300000,
-      "purchaseReference": 416675000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 200.0,
-      "value": 463200000,
-      "purchaseReference": 476000000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 250.0,
-      "value": 569250000,
-      "purchaseReference": 593750000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 500.0,
-      "value": 1138500000,
-      "purchaseReference": 1187000000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "Emasku",
-      "grams": 1000.0,
-      "value": 2277000000,
-      "purchaseReference": 2374000000,
-      "date": "2026-10-22",
-      "source": "https://hrtagold.id/id/gold-price",
-      "verified": true,
-      "observedAt": "2026-10-22T17:54:51.475019+07:00",
-      "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
-    },
-    {
-      "brand": "UBS",
-      "grams": 0.5,
-      "value": 1158000,
-      "date": "2026-10-23",
-      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
-      "verified": true
-    },
-    {
-      "brand": "UBS",
-      "grams": 1.0,
-      "value": 2316000,
-      "date": "2026-10-23",
-      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
-      "verified": true
-    },
-    {
-      "brand": "UBS",
-      "grams": 2.0,
-      "value": 4633000,
-      "date": "2026-10-23",
-      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
-      "verified": true
-    },
-    {
-      "brand": "UBS",
-      "grams": 3.0,
-      "value": 6949000,
-      "date": "2026-10-23",
-      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
-      "verified": true
-    },
-    {
-      "brand": "UBS",
-      "grams": 4.0,
-      "value": 9266000,
-      "date": "2026-10-23",
-      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
-      "verified": true
-    },
-    {
-      "brand": "UBS",
-      "grams": 5.0,
-      "value": 11582000,
-      "date": "2026-10-23",
-      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
-      "verified": true
-    },
     {
       "brand": "UBS",
       "grams": 10.0,
@@ -13565,6 +13090,294 @@
       "verified": true,
       "observedAt": "2026-11-20T17:41:59.394992+07:00",
       "verificationNote": "Direct browser observation of official HRTA Gold GOLD table; date is observation date."
+    },
+    {
+      "brand": "UBS",
+      "grams": 0.5,
+      "value": 1057000,
+      "date": "2026-11-20",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 1.0,
+      "value": 2115000,
+      "date": "2026-11-20",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 2.0,
+      "value": 4231000,
+      "date": "2026-11-20",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 3.0,
+      "value": 6346000,
+      "date": "2026-11-20",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 4.0,
+      "value": 8462000,
+      "date": "2026-11-20",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 5.0,
+      "value": 10577000,
+      "date": "2026-11-20",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 10.0,
+      "value": 21155000,
+      "date": "2026-11-20",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 25.0,
+      "value": 52888000,
+      "date": "2026-11-20",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 50.0,
+      "value": 105776000,
+      "date": "2026-11-20",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "UBS",
+      "grams": 100.0,
+      "value": 211552000,
+      "date": "2026-11-20",
+      "source": "https://ubslifestyle.com/harga-buyback-hari-ini/",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 0.5,
+      "value": 1106000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 1.0,
+      "value": 2216000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 2.0,
+      "value": 4424000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 5.0,
+      "value": 11061000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 10.0,
+      "value": 22122000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 25.0,
+      "value": 55034000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 50.0,
+      "value": 110068000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 100.0,
+      "value": 220136000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 250.0,
+      "value": 547616000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 500.0,
+      "value": 1095233000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Galeri 24",
+      "grams": 1000.0,
+      "value": 2190467000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
+      "grams": 1.0,
+      "value": 2192000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
+      "grams": 5.0,
+      "value": 10962000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
+      "grams": 10.0,
+      "value": 21925000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
+      "grams": 25.0,
+      "value": 54543000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
+      "grams": 50.0,
+      "value": 109086000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Lotus",
+      "grams": 100.0,
+      "value": 218172000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Antam",
+      "grams": 0.5,
+      "value": 1096000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Antam",
+      "grams": 1.0,
+      "value": 2192000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Antam",
+      "grams": 2.0,
+      "value": 4385000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Antam",
+      "grams": 3.0,
+      "value": 6577000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Antam",
+      "grams": 5.0,
+      "value": 10962000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Antam",
+      "grams": 10.0,
+      "value": 21925000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Antam",
+      "grams": 25.0,
+      "value": 54543000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Antam",
+      "grams": 50.0,
+      "value": 109086000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
+    },
+    {
+      "brand": "Antam",
+      "grams": 100.0,
+      "value": 218172000,
+      "date": "2026-11-20",
+      "source": "https://galeri24.co.id/harga-emas",
+      "verified": true
     }
   ],
   "note": "Official buyback prices, not guaranteed sale proceeds. Check fees and source date."
